@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/bench_event_api git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-cinnamon-nightingale.sh
-        container: qc.acc_paltry-seashell-civet
+        - /usr/bin/env sh .sqa/script.lovely-champagne-hummingbird.sh
+        container: qc.acc_scummy-saffron-havanese
   QC.Doc:
     repos:
       github.com/EOSC-synergy/bench_event_api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-chestnut-dodo.sh
-        container: qc.doc_flabby-ultramarine-kudu
+        - /usr/bin/env sh .sqa/script.slimy-denim-giraffe.sh
+        container: qc.doc_snappy-indigo-weasel
       github.com/EOSC-synergy/bench_event_api git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-tomato-newt.sh
-        container: qc.doc_homey-razzmatazz-panda
+        - /usr/bin/env sh .sqa/script.lanky-orchid-affenpinscher.sh
+        container: qc.doc_blurry-mustard-starfish
       github.com/EOSC-synergy/bench_event_api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-cyan-yak.sh
-        container: qc.doc_pokey-bronze-snail
+        - /usr/bin/env sh .sqa/script.cozy-xanthic-newfoundland.sh
+        container: qc.doc_shabby-goldenrod-mandrill
   QC.FAIR:
     repos:
       github.com/EOSC-synergy/bench_event_api F-UJI:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-teal-devil.sh
-        container: qc.fair_tacky-seashell-drever
+        - /usr/bin/env sh .sqa/script.sleepy-grey-turkey.sh
+        container: qc.fair_baggy-lilac-burmese
   QC.Lic:
     repos:
       github.com/EOSC-synergy/bench_event_api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-lilac-gharial.sh
-        container: qc.lic_cranky-pumpkin-tzu
+        - /usr/bin/env sh .sqa/script.hilly-indigo-dingo.sh
+        container: qc.lic_flaky-cinnamon-eagle
   QC.Sec:
     repos:
       github.com/EOSC-synergy/bench_event_api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-pear-grouse.sh
-        container: qc.sec_cranky-sapphire-pinscher
+        - /usr/bin/env sh .sqa/script.bumpy-gold-koala.sh
+        container: qc.sec_droopy-cardinal-clam
   QC.Sty:
     repos:
       github.com/EOSC-synergy/bench_event_api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-maroon-zebra.sh
-        container: qc.sty_baggy-flax-cuscus
+        - /usr/bin/env sh .sqa/script.homey-magenta-blue.sh
+        container: qc.sty_chewy-violet-bison
   QC.Ver:
     repos:
       github.com/EOSC-synergy/bench_event_api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-emerald-malamute.sh
-        container: qc.ver_snoopy-cobalt-dollar
+        - /usr/bin/env sh .sqa/script.whiny-ultramarine-ocelot.sh
+        container: qc.ver_stealthy-seashell-grasshopper
 timeout: 1800
