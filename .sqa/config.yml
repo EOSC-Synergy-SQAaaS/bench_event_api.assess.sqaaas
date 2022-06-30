@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/bench_event_api:
+      branch: master
+      repo: https://github.com/EOSC-synergy/bench_event_api
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.7.0-only_im_client
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/EOSC-synergy/bench_event_api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-cinnamon-nightingale.sh
+        container: qc.acc_paltry-seashell-civet
+  QC.Doc:
+    repos:
+      github.com/EOSC-synergy/bench_event_api find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-chestnut-dodo.sh
+        container: qc.doc_flabby-ultramarine-kudu
+      github.com/EOSC-synergy/bench_event_api git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-tomato-newt.sh
+        container: qc.doc_homey-razzmatazz-panda
+      github.com/EOSC-synergy/bench_event_api markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-cyan-yak.sh
+        container: qc.doc_pokey-bronze-snail
+  QC.FAIR:
+    repos:
+      github.com/EOSC-synergy/bench_event_api F-UJI:
+        commands:
+        - /usr/bin/env sh .sqa/script.cloudy-teal-devil.sh
+        container: qc.fair_tacky-seashell-drever
+  QC.Lic:
+    repos:
+      github.com/EOSC-synergy/bench_event_api licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-lilac-gharial.sh
+        container: qc.lic_cranky-pumpkin-tzu
+  QC.Sec:
+    repos:
+      github.com/EOSC-synergy/bench_event_api bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-pear-grouse.sh
+        container: qc.sec_cranky-sapphire-pinscher
+  QC.Sty:
+    repos:
+      github.com/EOSC-synergy/bench_event_api flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.tasty-maroon-zebra.sh
+        container: qc.sty_baggy-flax-cuscus
+  QC.Ver:
+    repos:
+      github.com/EOSC-synergy/bench_event_api get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-emerald-malamute.sh
+        container: qc.ver_snoopy-cobalt-dollar
+timeout: 1800
